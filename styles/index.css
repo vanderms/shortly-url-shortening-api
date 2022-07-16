@@ -15,8 +15,8 @@
   }
 
   .container-full {
-    max-width: 90rem;
-    @apply mx-auto;
+    @apply mx-auto overflow-hidden;
+    width: min(100%, 90rem);
   }
 
   @media screen(lg) {
@@ -60,24 +60,31 @@
   .vn__sm-text-xl {
     @apply font-medium text-center;
     font-size: 1.125rem;
-    line-height: 1.875rem;
-    text-align: center;
+    line-height: 1.875rem;    
     letter-spacing: 0.122727px;
     color: theme(colors.text);
   }
 
   .vn__lg-text-xl {
+    @apply text-left;
     font-size: 1.375rem;
     line-height: 2.25rem;
-    letter-spacing: 0.15px;
+    letter-spacing: 0.15px;    
   }
 }
 
 .vn__hero-image::before {
-  content: '';
+  content: "";
   display: block;
-  width: 100%;
-  padding-bottom: 82.5688073%;
+  width: 156.2691131%;
+  padding-bottom: 102.7625688%;
   background-image: url("/assets/illustration-working.svg");
   @apply bg-center bg-no-repeat bg-contain;
+}
+
+@media screen(lg){
+  .vn__hero-image::before{
+    width: 164.3497758%;
+    padding-bottom: 108.0717489%;
+  }
 }
