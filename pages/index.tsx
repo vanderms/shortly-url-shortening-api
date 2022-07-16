@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { Navbar } from "components/navbar/navbar";
 
 const Home: NextPage = () => {
   const name = "Shortly - more than just shorter links";
@@ -19,9 +20,10 @@ const Home: NextPage = () => {
         <meta property="og:url" content={url}></meta>
         <title>{title}</title>
       </Head>
-      <div>
-        hello there!
-      </div>
+      <Navbar />
+      <main>
+        
+      </main>
     </>
   );
 };

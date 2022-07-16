@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+@layer components {
+  .container {
+    max-width: 87.2%;
+    @apply mx-auto;
+  }
+
+  .container-full{
+    max-width: 90rem;
+    @apply mx-auto;
+  }
+
+  @media screen(lg) {
+    .container {
+      max-width: 69.375rem;
+    }
+  }
+
+  .mask-icon {
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+  }
+
+  .hamburger-icon {
+    @apply mask-icon;
+    mask-image: url("/assets/hamburger.svg");
+  }
+
+  .close-icon {
+    @apply mask-icon;
+    mask-image: url('/assets/close.svg');
+  }
+}
