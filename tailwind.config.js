@@ -15,6 +15,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#2bd0d0",
+        "primary-hover": "#9AE3E3",
         secondary: "#4b3f6b",
         stress: "#34313d",
         text: "#9e9aa8",
@@ -32,3 +33,5 @@ module.exports = {
   },
   plugins: [],
 }
+
+/** "primary-hover": "#9AE3E3", */
