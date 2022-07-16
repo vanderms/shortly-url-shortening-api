@@ -14,7 +14,7 @@
     @apply mx-auto;
   }
 
-  .container-full{
+  .container-full {
     max-width: 90rem;
     @apply mx-auto;
   }
@@ -25,19 +25,59 @@
     }
   }
 
-  .mask-icon {
+  .vn__mask-icon {
     mask-repeat: no-repeat;
     mask-size: contain;
     mask-position: center;
   }
 
-  .hamburger-icon {
-    @apply mask-icon;
+  .vn__hamburger-icon {
+    @apply vn__mask-icon;
     mask-image: url("/assets/hamburger.svg");
   }
 
-  .close-icon {
-    @apply mask-icon;
-    mask-image: url('/assets/close.svg');
+  .vn__close-icon {
+    @apply vn__mask-icon;
+    mask-image: url("/assets/close.svg");
   }
+
+  .vn__sm-title-xl {
+    @apply font-bold text-center;
+    font-size: 2.625rem;
+    line-height: 3rem;
+    text-align: center;
+    letter-spacing: -1.05px;
+    color: theme(colors.stress);
+  }
+
+  .vn__lg-title-xl {
+    @apply text-left;
+    font-size: 5rem;
+    line-height: 5.625rem;
+    letter-spacing: -2px;
+  }
+
+  .vn__sm-text-xl {
+    @apply font-medium text-center;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    text-align: center;
+    letter-spacing: 0.122727px;
+    color: theme(colors.text);
+  }
+
+  .vn__lg-text-xl {
+    font-size: 1.375rem;
+    line-height: 2.25rem;
+    letter-spacing: 0.15px;
+  }
+}
+
+.vn__hero-image::before {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-bottom: 82.5688073%;
+  background-image: url("/assets/illustration-working.svg");
+  @apply bg-center bg-no-repeat bg-contain;
 }

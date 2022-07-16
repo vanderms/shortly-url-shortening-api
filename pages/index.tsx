@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Navbar } from "components/navbar/navbar";
+import { HeroSection } from "components/sections/hero/hero";
 
 const Home: NextPage = () => {
   const name = "Shortly - more than just shorter links";
@@ -22,7 +23,7 @@ const Home: NextPage = () => {
       </Head>
       <Navbar />
       <main>
-        
+        <HeroSection/>
       </main>
     </>
   );

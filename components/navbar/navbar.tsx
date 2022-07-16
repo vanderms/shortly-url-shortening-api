@@ -38,12 +38,12 @@ export const Navbar: React.FC = () => {
       <div
         className={`fixed z-50 w-[min(22rem,87.2%)] right-align bg-bgdark pb-10 pt-6 px-6 
         rounded-lg flex flex-col items-center gap-8 
-        ${isSidebarOpen ? "top-24 transition-[top] duration-500" : "top-[-100vh]"}
+        ${isSidebarOpen ? "top-24 transition-[top] duration-300" : "top-[-100vh]"}
         lg:static lg:flex-row lg:w-auto lg:flex-grow lg:justify-between lg:p-0 lg:bg-transparent
       `}
       >
         <button
-          className={`close-icon h-4 w-4 bg-white self-end lg:hidden`}
+          className={`vn__close-icon h-4 w-4 bg-white self-end lg:hidden`}
           aria-label="close menu"
           onClick={() => setIsSidebarOpen(false)}
         ></button>
@@ -95,7 +95,7 @@ export const Navbar: React.FC = () => {
 
       <button
         onClick={() => setIsSidebarOpen(true)}
-        className={`hamburger-icon h-6 w-6 bg-text lg:hidden`}
+        className={`vn__hamburger-icon h-6 w-6 bg-text lg:hidden`}
         aria-label="open menu"
       ></button>
     </nav>
