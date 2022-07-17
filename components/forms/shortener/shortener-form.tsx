@@ -1,10 +1,14 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { useShortener } from "services/hooks/use-shortener";
+import { Spinner } from "components/icons/spinner";
 
 const URL_PATTERN =
   /^((http|https):\/\/)?(www.)?(?!.*(http|https|www.))[a-zA-Z0-9_-]+(\.[a-zA-Z]+)+(\/)?.([\w\?[a-zA-Z-_%\/@?]+)*([^\/\w\?[a-zA-Z0-9_-]+=\w+(&[a-zA-Z0-9_]+=\w+)*)?$/;
 
 export const ShortenerForm: React.FC = () => {
+  const { shorten, waiting } = useShortener();
+
   return (
     <Formik
       initialValues={{ url: "" }}
@@ -13,7 +17,11 @@ export const ShortenerForm: React.FC = () => {
           .matches(URL_PATTERN, "Link should be a valid URL")
           .required("Please add a link"),
       })}
-      onSubmit={(values) => console.log(JSON.stringify(values))}
+      onSubmit={(values, actions) => {
+        shorten(values.url).then(() => {
+          actions.resetForm();
+        });
+      }}
     >
       {(formik) => (
         <Form
@@ -26,13 +34,9 @@ export const ShortenerForm: React.FC = () => {
               type="text"
               name="url"
               placeholder="Shorten a link here..."
-              className={`w-full h-12 rounded-md px-4 text-stress md:h-16 md:px-8
-                ${
-                  formik.errors.url && formik.touched.url
-                    ? "border-[3px] border-danger"
-                    : ""
-                }
-              `}
+              className={`w-full h-12 rounded-md px-4 text-stress md:h-16 md:px-8 ${
+                formik.errors.url && formik.touched.url ? "border-[3px] border-danger" : ""
+              }`}
             />
             {formik.errors.url && formik.touched.url && (
               <span
@@ -44,10 +48,19 @@ export const ShortenerForm: React.FC = () => {
             )}
           </label>
           <button
+            disabled={waiting}
             type="submit"
-            className={`w-full h-12 rounded-md bg-primary hover:bg-primary-hover text-white font-bold text-lg md:h-16`}
+            className={`w-full h-12 rounded-md bg-primary hover:bg-primary-hover text-white 
+            font-bold text-lg flex items-center justify-center gap-4 md:h-16 `}
           >
-            Shorten It!
+            {waiting ? (
+              <>
+                <Spinner />
+                <span>Processing...</span>
+              </>
+            ) : (
+              "Shorten It!"
+            )}
           </button>
         </Form>
       )}

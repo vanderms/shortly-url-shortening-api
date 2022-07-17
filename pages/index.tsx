@@ -3,6 +3,7 @@ import Head from "next/head";
 import { Navbar } from "components/navbar/navbar";
 import { HeroSection } from "components/sections/hero/hero";
 import { ShortenerSection } from "components/sections/shortener/shortener";
+import { ShortenerContextProvider } from "services/contexts/shortener-context";
 
 const Home: NextPage = () => {
   const name = "Shortly - more than just shorter links";
@@ -26,7 +27,9 @@ const Home: NextPage = () => {
         <Navbar />
         <main className="pb-[100vh]">
           <HeroSection />
-          <ShortenerSection/>
+          <ShortenerContextProvider>
+            <ShortenerSection />
+          </ShortenerContextProvider>
         </main>
       </div>
     </>

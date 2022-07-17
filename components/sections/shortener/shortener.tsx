@@ -1,25 +1,10 @@
 import { ShortenerForm } from "components/forms/shortener/shortener-form";
 import { LinkCard } from "components/cards/link/link-card";
-
-const shortenedLinks = [
-  {
-    id: 1,
-    url: "https://www.frontendmentor.io",
-    shortened: "https://rel.ink/k4lKyk	",
-  },
-  {
-    id: 2,
-    url: "https://twitter.com/frontendmentor",
-    shortened: "https://rel.ink/k4lKyk	",
-  },
-  {
-    id: 3,
-    url: "https://www.linkedin.com/companies-big-and-fast-ones",
-    shortened: "https://rel.ink/k4lKyk	",
-  },
-];
+import { useShortener } from "services/hooks/use-shortener";
 
 export const ShortenerSection: React.FC = () => {
+  const { links } = useShortener();
+
   return (
     <section className={`mt-[5.5rem] `} aria-labelledby="nv__shortener-section-title">
       <h2 className="sr-only" id="nv__shortener-section-title">
@@ -34,10 +19,10 @@ export const ShortenerSection: React.FC = () => {
         </div>
       </div>
       <div className="mt-[-5rem] h-20 bg-bglight w-full lg:mt-[-5.25rem] lg:h-[5.25rem]"></div>
-      {shortenedLinks.length > 0 && (
+      {links.length > 0 && (
         <div className="pt-6 bg-bglight">
           <ul className="container flex flex-col gap-6">
-            {shortenedLinks.map((link) => (
+            {links.map((link) => (
               <li key={link.id}>
                 <LinkCard url={link.url} shortened={link.shortened} />
               </li>
