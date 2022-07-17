@@ -19,7 +19,7 @@ export const LinkCard: React.FC<LinkCardProps> = ({ url, shortened }) => {
       <p className="mt-3 text-primary font-bold lg:justify-self-end lg:mt-0">{shortened}</p>
       <button
         disabled={hasCopied}
-        className={`flex items-center justify-center mt-3 w-full h-10 bg-primary 
+        className={`grid place-items-center mt-3 w-full h-10 bg-primary 
           hover:bg-primary-hover rounded-md  d lg:mt-0
           disabled:bg-secondary
         `}
@@ -30,7 +30,7 @@ export const LinkCard: React.FC<LinkCardProps> = ({ url, shortened }) => {
               setHasCopied(true);
               window.setTimeout(() => {
                 setHasCopied(false);
-              }, 3000);
+              }, 2000);
             })
             .catch((e) => console.log(e.message));
         }}

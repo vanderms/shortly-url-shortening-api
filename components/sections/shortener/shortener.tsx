@@ -33,8 +33,9 @@ export const ShortenerSection: React.FC = () => {
           <ShortenerForm />
         </div>
       </div>
+      <div className="mt-[-5rem] h-20 bg-bglight w-full lg:mt-[-5.25rem] lg:h-[5.25rem]"></div>
       {shortenedLinks.length > 0 && (
-        <div className="pt-[7.875rem] mt-[-6.375rem] bg-bglight">
+        <div className="pt-6 bg-bglight">
           <ul className="container flex flex-col gap-6">
             {shortenedLinks.map((link) => (
               <li key={link.id}>
