@@ -37,7 +37,7 @@ export const Navbar: React.FC = () => {
       </Link>
       <div
         className={`fixed z-50 w-[min(22rem,87.2%)] right-align bg-bgdark pb-10 pt-6 px-6 
-        rounded-lg flex flex-col items-center gap-8 
+        rounded-lg flex flex-col items-center gap-8 max-h-[calc(100vh_-_6rem)] overflow-auto
         ${isSidebarOpen ? "top-24 transition-[top] duration-300" : "top-[-100vh]"}
         lg:static lg:flex-row lg:w-auto lg:flex-grow lg:justify-between lg:p-0 lg:bg-transparent
       `}

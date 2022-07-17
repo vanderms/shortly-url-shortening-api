@@ -60,7 +60,7 @@
   .vn__sm-text-xl {
     @apply font-medium text-center;
     font-size: 1.125rem;
-    line-height: 1.875rem;    
+    line-height: 1.875rem;
     letter-spacing: 0.122727px;
     color: theme(colors.text);
   }
@@ -69,7 +69,7 @@
     @apply text-left;
     font-size: 1.375rem;
     line-height: 2.25rem;
-    letter-spacing: 0.15px;    
+    letter-spacing: 0.15px;
   }
 }
 
@@ -82,9 +82,21 @@
   @apply bg-center bg-no-repeat bg-contain;
 }
 
-@media screen(lg){
-  .vn__hero-image::before{
+@media screen(lg) {
+  .vn__hero-image::before {
     width: 164.3497758%;
     padding-bottom: 108.0717489%;
+  }
+}
+
+.vn__shortener-pattern::before {
+  @apply absolute inset-0 bg-center bg-no-repeat bg-cover;
+  content: "";  
+  background-image: url("/assets/bg-shorten-mobile.svg");
+}
+
+@media screen(lg) {
+  .vn__shortener-pattern::before {
+    background-image: url("/assets/bg-shorten-desktop.svg");
   }
 }
