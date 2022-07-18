@@ -17,22 +17,22 @@ export const StatisticsSection: React.FC = () => {
         </header>
         <div className="mt-12 relative lg:mt-14">
           <div className="vn__statistics-pattern absolute inset-0 grid place-items-center"></div>
-          <ul className="flex flex-col items-center gap-12 relative z-10 lg:flex-row">
-            <li>
+          <ul className="flex flex-col items-center gap-12 relative z-10 lg:flex-row lg:h-[24.9375rem]">
+            <li className="lg:self-start">
               <StatisticsCard
                 icon="/assets/icon-brand-recognition.svg"
                 title="Brand Recognition"
                 description="Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your content."
               />
             </li>
-            <li className="lg:mt-11">
+            <li className="">
               <StatisticsCard
                 icon="/assets/icon-detailed-records.svg"
                 title="Detailed Records"
                 description="Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions."
               />
             </li>
-            <li className="lg:mt-[5.5rem]">
+            <li className="lg:self-end">
               <StatisticsCard
                 icon="/assets/icon-fully-customizable.svg"
                 title="Fully Customizable"

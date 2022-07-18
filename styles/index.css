@@ -140,6 +140,18 @@
   }
 }
 
+.vn__boost-pattern::before {
+  @apply absolute inset-0 bg-center bg-no-repeat bg-cover;
+  content: "";
+  background-image: url("/assets/bg-boost-mobile.svg");
+}
+
+@media screen(lg) {
+  .vn__boost-pattern::before {
+    background-image: url("/assets/bg-boost-desktop.svg");
+  }
+}
+
 .vn__statistics-pattern::before {
   content: "";
   display: block;

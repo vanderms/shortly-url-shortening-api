@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ActionLink } from "components/buttons/action-link/action-link";
 
 export const HeroSection: React.FC = () => {
   return (
@@ -13,14 +14,9 @@ export const HeroSection: React.FC = () => {
             Build your brand&apos;s recognition and get detailed insights on how your links
             are performing.
           </p>
-          <Link href="/">
-            <a
-              className={`grid place-items-center text-white text-xl w-max h-14 px-10
-             bg-primary rounded-full hover:bg-primary-hover mt-8 mx-auto lg:mx-0 lg:mt-10`}
-            >
-              Get Started
-            </a>
-          </Link>
+          <div className="mt-8 lg:mt-10">
+            <ActionLink href="/">Get Started</ActionLink>
+          </div>
         </header>
       </div>
     </section>
