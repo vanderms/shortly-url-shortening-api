@@ -6,6 +6,7 @@ import { ShortenerSection } from "components/sections/shortener/shortener";
 import { ShortenerContextProvider } from "services/contexts/shortener-context";
 import { StatisticsSection } from "components/sections/statistics/statistics";
 import { CallToActionSection } from "components/sections/call-to-action/call-to-action";
+import { Footer } from "components/sections/footer/footer";
 
 const Home: NextPage = () => {
   const name = "Shortly - more than just shorter links";
@@ -35,6 +36,7 @@ const Home: NextPage = () => {
           <StatisticsSection />
           <CallToActionSection/>
         </main>
+        <Footer/>
       </div>
     </>
   );

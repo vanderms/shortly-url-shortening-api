@@ -8,7 +8,7 @@ export const ShortenerSection: React.FC = () => {
   const titleId = useId();
 
   return (
-    <section className={`mt-[5.5rem] `} aria-labelledby={titleId}>
+    <section className={`mt-[5.5rem] lg:mt-[4.25rem] `} aria-labelledby={titleId}>
       <h2 className="sr-only" id={titleId}>
         Link Shortener
       </h2>

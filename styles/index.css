@@ -41,6 +41,31 @@
     mask-image: url("/assets/close.svg");
   }
 
+  .vn__facebook-icon {
+    @apply vn__mask-icon;
+    mask-image: url("/assets/icon-facebook.svg");
+  }
+
+  .vn__twitter-icon {
+    @apply vn__mask-icon;
+    mask-image: url("/assets/icon-twitter.svg");
+  }
+
+  .vn__instagram-icon {
+    @apply vn__mask-icon;
+    mask-image: url("/assets/icon-instagram.svg");
+  }
+
+  .vn__pinterest-icon {
+    @apply vn__mask-icon;
+    mask-image: url("/assets/icon-pinterest.svg");
+  }
+
+  .vn__logo-svg {
+    @apply vn__mask-icon;
+    mask-image: url("/assets/logo.svg");
+  }
+
   .vn__sm-title-xl {
     @apply font-bold text-center;
     font-size: 2.625rem;
