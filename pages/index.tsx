@@ -4,6 +4,7 @@ import { Navbar } from "components/navbar/navbar";
 import { HeroSection } from "components/sections/hero/hero";
 import { ShortenerSection } from "components/sections/shortener/shortener";
 import { ShortenerContextProvider } from "services/contexts/shortener-context";
+import { StatisticsSection } from "components/sections/statistics/statistics";
 
 const Home: NextPage = () => {
   const name = "Shortly - more than just shorter links";
@@ -30,6 +31,7 @@ const Home: NextPage = () => {
           <ShortenerContextProvider>
             <ShortenerSection />
           </ShortenerContextProvider>
+          <StatisticsSection/>
         </main>
       </div>
     </>

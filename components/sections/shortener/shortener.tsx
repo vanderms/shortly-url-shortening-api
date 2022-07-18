@@ -1,13 +1,15 @@
 import { ShortenerForm } from "components/forms/shortener/shortener-form";
 import { LinkCard } from "components/cards/link/link-card";
 import { useShortener } from "services/hooks/use-shortener";
+import { useId } from "react";
 
 export const ShortenerSection: React.FC = () => {
   const { links } = useShortener();
+  const titleId = useId();
 
   return (
-    <section className={`mt-[5.5rem] `} aria-labelledby="nv__shortener-section-title">
-      <h2 className="sr-only" id="nv__shortener-section-title">
+    <section className={`mt-[5.5rem] `} aria-labelledby={titleId}>
+      <h2 className="sr-only" id={titleId}>
         Link Shortener
       </h2>
       <div
